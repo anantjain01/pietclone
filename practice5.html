@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/x-icon"
+    href="http://www.piet.poornima.org/public/main_assets/images/icon.png" />
+  <title>PIET clone</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <!-- <link rel="stylesheet" href="./practice7.css"> -->
+
+
+
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+    }
+
+    .navlist1 {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 50px;
+      padding-left: 120px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      margin-bottom: 0px;
+      letter-spacing: 20px;
+      background-color: rgb(212, 44, 44);
+      box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.02);
+      z-index: 1;
+    }
+
+    .navlist1 img {
+      height: 35px;
+      width: 35px;
+      /* padding: 2px; */
+      margin-right: 25px;
+      border: 2px solid #c11712;
+      background-color: #c11712;
+      border-radius: 50%;
+    }
+
+    .navlist2 {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      /* margin-top: 10px; */
+      width: 100%;
+      height: 80px;
+      font-size: 20px;
+      background-color: rgb(212, 44, 44);
+      color: white;
+      /* box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.02);
+      z-index: 1; */
+    }
+
+    .navlist3 {
+      /* margin: 20px 20px; */
+      margin: 20px;
+      padding-left: 100px;
+    }
+
+    .carousel-inner {
+      height: 400px;
+    }
+
+    .carousel-inner img {
+      height: 400px;
+    }
+
+    .container {
+      width: 100%;
+      padding: 3em 6em;
+      box-shadow: 0 6px 7px #736c6c;
+      background-image: url(http://www.pce.poornima.org/styles/scribble_light.png);
+    }
+
+    .para1 {
+      /* margin-top: 40px; */
+      justify-content: center;
+      align-items: center;
+      background: #ffffff;
+      overflow: hidden;
+      margin-bottom: 30px;
+      box-shadow: 0 2px 5px #9a9a9a;
+    }
+
+    .para1p1 {
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 30px;
+      font-size: 25px;
+      background-color: #444;
+      color: #ffffff;
+    }
+
+    .para1p2 {
+      text-align: justify;
+      padding: 20px;
+    }
+
+    .para2 {
+      /* margin-top: 40px; */
+      background: #ffffff;
+      overflow: hidden;
+      margin-bottom: 30px;
+      box-shadow: 0 2px 5px #9a9a9a;
+    }
+
+    .para2p1 {
+      padding: 25px;
+    }
+
+    .para2p2 {
+      list-style: inside;
+      padding-left: 30px;
+    }
+
+    .para3 {
+      /* margin-top: 40px; */
+      background: #ffffff;
+      overflow: hidden;
+      margin-bottom: 30px;
+      box-shadow: 0 2px 5px #9a9a9a;
+    }
+    .para3p1{
+      padding: 25px;
+    }
+    .para3p2{
+      text-align: justify;
+      padding: 20px;
+    }
+
+    .para4 {
+      background: #ffffff;
+      overflow: hidden;
+      margin-bottom: 30px;
+      box-shadow: 0 2px 5px #9a9a9a;
+    }
+
+    .para4p1 {
+      padding: 25px;
+    }
+
+    .para4p2 {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      width: 949px;
+    }
+
+    .card {
+      margin: 19px;
+      padding: 10px;
+      width: 17rem;
+      border: white;
+    }
+
+    .card img {
+      width: 250px;
+      height: 250px;
+      border: white;
+      border-radius: 50%;
+    }
+
+
+    .footer {
+      background-color: rgba(0, 0, 0, 0.73);
+      display: inline-flex;
+      width: 100%;
+      height: 60vh;
+      overflow: hidden;
+      /* display: grid;
+      grid-column: auto auto auto;
+      grid-row: auto; */
+        /* flex-direction: ; */
+        /* justify-content: center; */
+        /* flex-basis: .5; */
+    }
+
+    .footer .box_1 {
+      margin: 30px;
+      width: 100%;
+      height: 300px;
+      /* background-color: aquamarine; */
+    }
+
+    .footer .title {
+      color: snow;
+      font-size: 35px;
+      display: flex;
+      margin-left: 39px;
+      align-items: center;
+    }
+
+    .footer .item {
+      padding: 30px;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      margin: 20px;
+      margin-left: 30px;
+      color: silver;
+    }
+
+    .footer .item :hover {
+      color: snow;
+    }
+
+    .item .fa-solid {
+      font-size: 20px;
+      margin: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <ul class="navlist1">
+      <div>
+        <a href="#"><img src="/images/brand-twitter.png" alt=""></a>
+      </div>
+      <div>
+        <a href="#"><img src="./images/brand-facebook.png" alt=""></a>
+      </div>
+      <div>
+        <a href="#"><img src="./images/brand-youtube.png" alt=""></a>
+      </div>
+      <div>
+        <a href="#"><img src="./images/brand-linkedin.png" alt=""></a>
+      </div>
+    </ul>
+  </div>
+  <div class="navlist3">
+    <a href="#"><img src="http://www.piet.poornima.org/public/main_assets/images/logo.png" alt=""></a>
+  </div>
+  <div>
+    <ul class="navlist2">
+      <div>Home</div>
+      <div>About us</div>
+      <div>Admission</div>
+      <div>Traning and Placement</div>
+      <div>Department</div>
+      <div>Facilities</div>
+      <div>Student</div>
+      <div>Alumni</div>
+    </ul>
+  </div>
+  <!-- slider -->
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="http://www.piet.poornima.org/public/main_assets/images/FDP%20CS%20flex%20%208%20x%204%20feet.jpg"
+          class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="http://www.piet.poornima.org/public/main_assets/images/slider3.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="http://www.piet.poornima.org/public/main_assets/images/PIET_Red%20Hat%20Day%20Banner.jpg"
+          class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-target="#carouselExampleIndicators" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-target="#carouselExampleIndicators" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </button>
+  </div>
+  <div class="container">
+    <section class="para1">
+      <p class="para1p1">
+        POORNIMA INSTITUTE OF ENGINEERING & TECHNOLOGY
+      </p>
+      <p class="para1p2">
+        Poornima Institute of Engineering & Technology, was established in 2007 with the aim of imparting pragmatic
+        technical education. In its magnificent journey of 12 years, PIET has set benchmarks and reached at new
+        pinnacles in Engineering Education with dedication, perseverance and devotion. PIET is spearheading its
+        outstanding voyage with the motto ‘Success is not a destination, it’s a journey’.
+      </p>
+    </section>
+    <section class="para2">
+      <h4 class="para2p1">Highlights</h4>
+      <ul class="para2p2">
+        <li>State of Art of Infrastructure for innovative Teaching Pedagogy and ICT based learning</li>
+        <li> Offering five streams of Engineering (CE, ECE, EE,ME & Civil) at UG level.
+        </li>
+        <li> Accredited with NBA for B.Tech CSE & B.Tech EE in 2018
+        </li>
+        <li> Arbuda Convention Center: A Multimedia Auditorium with 500+ seating capacity.
+        </li>
+        <li>
+          oriented for Techno Managers.
+        </li>
+        <li>
+          IEEE, ISTE, IE (I) and ISLE Student chapters.
+        <li>
+        <li>
+          Organized workshops on various Technical and Non-Technical topics.
+        </li>
+        <li>
+          Completely Wi-Fi enabled campus.
+        </li>
+        <li>
+          Several projects sponsored by AICTE & DST, Govt. of Rajasthan.
+        </li>
+        <li>
+          Collaboration with IBM for research on Business Intelligence and Cloud Computing.
+        </li>
+        <li>
+          Hands on Learning with Project Oriented Lab & Non Syllabus Projects
+        </li>
+        <li>
+          Focus on outcome based education with proper mapping through, CO's PO's, & PSO's
+        </li>
+        <li>
+          More than 10 SCI/Scopus & around 80 UGC Publications in 5 years
+        </li>
+        <li>
+          Research Grants of more than 30 Lac in 5 years
+        </li>
+        <li>
+          Regular and quality placements in all Major MNC's like Infosys, Capgemini. IBM, Adani, etc.
+        </li>
+        <li>
+          Industry oriented labs for quality education IBM, Oracle, FACE, Redhat, CESA etc.
+        </li>
+        <li>
+          Activities in association with NEN, AICTE, DST, RTU
+        </li>
+        <li>
+          Regular conduct of National & International Conference/Workshop/Seminar etc
+        </li>
+      </ul>
+    </section>
+    <section class="para3">
+      <h4 class="para3p1">Events</h4>
+      <p class="para3p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat rem veniam quos labore sequi numquam doloremque? Perferendis porro illo minima beatae modi, ipsam nesciunt, aspernatur hic obcaecati voluptas labore consequuntur.</p>
+    </section>
+    <section class="para4">
+      <h4 class="para4p1">Department</h4>
+      <div class="para4p2">
+        <div class="card">
+          <img src="http://www.piet.poornima.org/public/main_assets/images/ce.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h6 class="card-text">Computer Engineering</h6>
+          </div>
+        </div>
+        <div class="card">
+          <img src="http://www.piet.poornima.org/public/main_assets/images/ee.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h6 class="card-text">Electrical Engineering</h6>
+          </div>
+        </div>
+        <div class="card">
+          <img src="http://www.piet.poornima.org/public/main_assets/images/civil.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h6 class="card-text">Civil Engineering</h6>
+          </div>
+        </div>
+        <div class="card">
+          <img src="http://www.piet.poornima.org/public/main_assets/images/ec.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h6 class="card-text">Electronics & Communication Engineering</h6>
+          </div>
+        </div>
+        <div class="card">
+          <img src="http://www.piet.poornima.org/public/main_assets/images/mech_eng.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h6 class="card-text">Mechanical Engineering</h6>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="footer">
+    <div class="box_1">
+      <div class="title">About Us</div>
+      <div class="item">
+
+        <h6><i class="fa-solid fa-circle-dot"></i>Placements</h6>
+        <h6><i class="fa-solid fa-circle-dot"></i>Hostel</h6>
+        <h6><i class="fa-solid fa-circle-dot"></i>Career</h6>
+        <h6><i class="fa-solid fa-circle-dot"></i>Disclaimer</h6>
+        <h6><i class="fa-solid fa-circle-dot"></i>Privacy policy</h6>
+        <h6><i class="fa-solid fa-circle-dot"></i>Mandatory Disclosure</h6>
+      </div>
+    </div>
+    <div class="box_1">
+      <div class="title">Contact Us</div>
+      <div class="item">
+        <h6><i class="fa-solid fa-location-dot"></i>ISI-2, RIICO Institutional Area, Goner Road, Sitapura,
+          Jaipur - 302022</h6>
+        <h6><i class="fa-solid fa-phone"></i>0141- 2771259, 68</h6>
+        <h6><i class="fa-solid fa-envelope"></i>info@poornima.org</h6>
+        <h6><i class="fa-solid fa-globe"></i>pietjaipur@rtu.ac.in</h6>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
